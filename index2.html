@@ -5,23 +5,125 @@
 	<title>Curriculum vitae</title>
 	<!--<link rel="stylesheet" type="text/css" href="style2.css">-->
 	<style type="text/css">
-		.topDiv: {
-			background: blue;
-			border: 10px solid red;
-			color: lime;
-			margin: 7px;
-			padding: 13px;
+		body {
+			font-family: arial;
 		}
-		/*.topDiv {
-			color: green;
-			background: lime;
-		}*/
+		a {
+			color: #00bfff;
+		}
+		.container {
+			margin-left: 200;
+			border: 5px solid #d3d3d3;
+			width: 700px;
+			}
+		.topDiv {
+			background: #3d4f5b;
+			color: white;
+			padding: 5px;
+			font-weight: 200;
+			text-align: center;
+		}
+		.flexContainer {
+			display: inline-flex;
+		}
+		.leftBox {
+			background: linear-gradient(135deg, #444444, #6d6d6d);
+			width: 200px;
+			height: 500px;
+			color: #ffffff;
+			}
+		img {
+			border-radius: 40px;
+			margin-left: 25px;
+			margin-top: 25px;
+			border: 2px solid #d3d3d3;
+		}
+		#persona {
+			width: 180px;
+			margin-left: 10px;
+			border-width: 2px;
+			border-bottom: 2px solid #ffff00;
+			font-size: 200%;
+			text-align: center;
+			padding-bottom: 15px;
+			padding-top: 25px;
+			}
+		.caption {
+			text-align: center;
+			font-size: 120%;
+			text-decoration: underline;
+			font-weight: 600;
+		}
+		.preferences {
+			border-radius: 20px;
+			text-align: center;
+			font-size: 70%;
+			margin: 4px;
+			padding: 2px;
+		}
+		.sun {
+			background-color: #ffa500;
+			width: 140px;
+		}
+		.water {
+			background-color: #0174df;
+			width: 100px;
+		}
+		.bees {
+			background-color: #008000;
+			width: 170px;
+		}
+		.rightBox {
+			color: #084b8a;
+		}
+		div.caption2 {
+			border-bottom: 2px solid #0080ff;
+		}
+		.caption2 {
+			font-size: 130%;
+			font-weight: 600;
+		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="topDiv">
-			<h3>Curriculum vitae</h3>
+			<h1>Curriculum vitae</h1>
+		</div>
+		<div class="flexContainer">
+			<div class="leftBox">
+				<img src="images/romashki.jpg" width="150px";>
+				<div id="persona"> Ромашка </div>
+				<div>
+					<p class="caption">Люблю:</p>
+					<div class="preferences sun">Солнце</div>
+					<div class="preferences water">Воду</div>
+					<div class="preferences bees">Пчел</div>
+					<p class="caption">Контакты</p>
+					<ul>
+						<li><a href="#">Vk</li>
+						<li><a href="#">Ok</li>
+						<li><a href="#">Facebook</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rightBox">
+				<div class="caption2">Дата рождения:
+				<p>31 февраля</p>
+				<p class="caption2">Место рождения:</p>
+				<p>Поля-луга</p>
+				</div>
+				<div class="caption2">Soft skills:
+					<p>- Открытая</p>
+					<p>- Радостная</p>
+					<p>- Простая</p>
+				</div>
+				<div class="caption2">Обо мне:
+				<p>- Открытая</p>
+				<p>- Радостная</p>
+				<p>- Простая</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
