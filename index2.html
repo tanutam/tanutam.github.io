@@ -11,8 +11,8 @@
 		a {
 			color: #00bfff;
 		}
-		.container {
-			margin-left: 200;
+		#container {
+			margin: auto;
 			border: 5px solid #d3d3d3;
 			width: 700px;
 			}
@@ -24,12 +24,11 @@
 			text-align: center;
 		}
 		.flexContainer {
-			display: inline-flex;
+			display: flex;
 		}
 		.leftBox {
 			background: linear-gradient(135deg, #444444, #6d6d6d);
 			width: 200px;
-			height: 500px;
 			color: #ffffff;
 			}
 		img {
@@ -89,7 +88,7 @@
 	</style>
 </head>
 <body>
-	<div class="container">
+	<div id="container">
 		<div class="topDiv">
 			<h1>Curriculum vitae</h1>
 		</div>
@@ -104,9 +103,9 @@
 					<div class="preferences bees">Пчел</div>
 					<p class="caption">Контакты</p>
 					<ul>
-						<li><a href="#">Vk</li>
-						<li><a href="#">Ok</li>
-						<li><a href="#">Facebook</li>
+						<li><a href="#">Vk</a></li>
+						<li><a href="#">Ok</a></li>
+						<li><a href="#">Facebook</a></li>
 					</ul>
 				</div>
 			</div>
