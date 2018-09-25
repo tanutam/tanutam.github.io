@@ -1,0 +1,1291 @@
+{
+	"info": {
+		"_postman_id": "7e99487f-f3f4-4962-8f2c-0d420fed556e",
+		"name": "Weather Forecast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Current, one location, by city name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, one location, by city name + country code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv,UA&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv,UA"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, one location, by city id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?id=2130135&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2130135"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, one location, by geographic coordinates",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=36.783329&lon=137.066666&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "36.783329"
+						},
+						{
+							"key": "lon",
+							"value": "137.066666"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, one location, by ZIP code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=01103,ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "01103,ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, several cities, within a rectangle zone",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/box/city?bbox=21,48,25,52,10&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "21,48,25,52,10"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, several cities, within a rectangle zone, ukr.language",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/box/city?bbox=21,48,25,52,10&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "21,48,25,52,10"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, several cities, within the circle of 10 (by default)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/find?lat=48&lon=25&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "48"
+						},
+						{
+							"key": "lon",
+							"value": "25"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, several cities, within definite circle, ukr.language",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/find?lat=48&lon=25&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "48"
+						},
+						{
+							"key": "lon",
+							"value": "25"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, several cities, within circle of 8 cities, ukr.language",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/find?lat=48&lon=25&lang=ua&cnt=8&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "48"
+						},
+						{
+							"key": "lon",
+							"value": "25"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "cnt",
+							"value": "8"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current, several cities, for several city IDs ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/group?id=1855540,1855694,7279571,1857751&units=metric&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1855540,1855694,7279571,1857751"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSON format of response by default",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "XML-mode of response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&mode=xml&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "mode",
+							"value": "xml"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HTML-mode of response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&mode=html&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "mode",
+							"value": "html"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search accuracy = LIKE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&type=like&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "type",
+							"value": "like"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search accuracy = ACCURATE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&type=accurate&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "type",
+							"value": "accurate"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Temperature in Kelvin (by default)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Temperature in Fahrenheit, units parameter = imperial",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&units=imperial&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "units",
+							"value": "imperial"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Temperature in Celsius, units parameter = metric",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&units=metric&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multilingual support, Ukrainian",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&lang=ua&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multilingual support, Chinese Traditional",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&lang=zh_tw&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "lang",
+							"value": "zh_tw"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Callback functionName, JavaScript code is returned",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb398092-7ca7-489f-868f-99e1acc191dd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 115,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"crocodile\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&callback=test&APPID=cd135fbfb1d4b893adf27e133eae485a",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "callback",
+							"value": "test"
+						},
+						{
+							"key": "APPID",
+							"value": "cd135fbfb1d4b893adf27e133eae485a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
